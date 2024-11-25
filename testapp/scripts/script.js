@@ -74,7 +74,7 @@ function login() {
         // console.error('tidecloak has not been initialized');
         return;
     }
-	tidecloak.login({ redirectUri: 'http://localhost:3000/test' });
+	tidecloak.login({ redirectUri: '${window.location.origin}' });
 }
 
 function loadValuesFromUrlFragment() {
