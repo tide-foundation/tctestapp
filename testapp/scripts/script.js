@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Bind event listeners to buttons by ID
     document.getElementById("save-button").addEventListener("click", function () {
         saveFormValues();
-		window.location.replace("/test#url="+tidecloakUrl+"&realm="+realm+"&client="+clientId);
+		window.location.replace("/#url="+tidecloakUrl+"&realm="+realm+"&client="+clientId);
     });
     document.getElementById("clear-config-button").addEventListener("click", clearConfig);
     document.getElementById("login-button").addEventListener("click", login);
