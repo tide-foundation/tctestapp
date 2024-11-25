@@ -16,13 +16,13 @@ function initTC(setstate) {
 	});
 	
 	tidecloak.init({
-      onLoad: "check-sso",
-      silentCheckSsoRedirectUri: window.location.origin + "/silent-check-sso.html",
-      pkceMethod: "S256",
-    })
-    .then((authenticated) => {
-      if (!authenticated) {
-        // console.log("user is not authenticated!");
+	      onLoad: "check-sso",
+	      silentCheckSsoRedirectUri: window.location.origin + "/silent-check-sso.html",
+	      pkceMethod: "S256",
+	    })
+	    .then((authenticated) => {
+	      if (!authenticated) {
+	        // console.log("user is not authenticated!");
 		if (setstate=="preset") {
 			// User is not authenticated; show the form
 			document.getElementById("tidecloak-form").classList.remove("hidden");
@@ -31,7 +31,7 @@ function initTC(setstate) {
 			document.getElementById("tidecloak-form").classList.add("hidden");
 			document.getElementById("buttons-container").classList.remove("hidden");
 		}
-      } else {
+	      } else {
 		// User is authenticated; show logged-in state
 		// console.log("user is authenticated!!!");
 		
@@ -40,7 +40,7 @@ function initTC(setstate) {
 		displayWelcomeMessage();
 		document.getElementById("login-button").classList.add("hidden");
 		document.getElementById("logout-button").classList.remove("hidden");
-        console.log("AccessToken is " + tidecloak.token);
+	        console.log("AccessToken is " + tidecloak.token);
 	  }}
 	)
     .catch(console.error);
@@ -55,17 +55,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Bind event listeners to buttons by ID
     document.getElementById("save-button").addEventListener("click", function () {
         saveFormValues();
-		window.location.replace("/#url="+tidecloakUrl+"&realm="+realm+"&client="+clientId);
+	window.location.replace("/#url="+tidecloakUrl+"&realm="+realm+"&client="+clientId);
+	initTC("postset");
     });
     document.getElementById("clear-config-button").addEventListener("click", clearConfig);
     document.getElementById("login-button").addEventListener("click", login);
     document.getElementById("logout-button").addEventListener("click", logout);
 
     // Initialize tidecloak and check authentication state
-	if (foundForm || foundFrags) {
-		initTC("postset");
+    if (foundForm || foundFrags) {
+	initTC("postset");
 	} else {
-		initTC("preset");
+	initTC("preset");
 	}
 });
 
