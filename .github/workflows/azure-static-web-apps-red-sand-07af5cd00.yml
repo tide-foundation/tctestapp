@@ -28,7 +28,7 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # This is the root of your repo where your files are located
+          app_location: "/testapp" # This is the root of your repo where your files are located
           api_location: "" # No separate API
           output_location: "/" # Deploy all files from the root directory to the website root
           ###### End of Repository/Build Configurations ######
