@@ -1,0 +1,87 @@
+/* Style for the heading */
+.heading {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style for the form container */
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields styling */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* General button styles */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the buttons container */
+.buttons-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Message styling */
+.message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Specific style for the logout button */
+.logout-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Hover effect for the logout button */
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Application</title>
+
+    <!-- CSP Header -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; frame-src *; connect-src *;">
+   
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="../test/styles.css">
+</head>
+<body>
+
+    <!-- Title for the form -->
+    <h1 class="heading">Welcome to TideCloak Test Application</h1>
+
+    <form id="tidecloak-form" class="form-container">
+        <label for="tidecloak-url">TideCloak URL</label><br>
+        <input type="text" id="tidecloak-url" name="tidecloak-url" value="http://localhost:8080" class="input-field"><br><br>
+        
+        <label for="realm">Realm</label><br>
+        <input type="text" id="realm" name="realm" value="myrealm" class="input-field"><br><br>
+
+        <label for="client">Client</label><br>
+        <input type="text" id="client" name="client" value="myclient" class="input-field"><br><br>
+
+        <button type="button" id="save-button" class="button">Save</button>
+    </form>
+
+    <!-- Container for the buttons, initially hidden -->
+    <div id="buttons-container" class="buttons-container hidden">
+        <!-- Login button -->
+        <button type="button" id="login-button" class="button">Sign in</button><br>
+        <!-- Clear config button -->
+        <button type="button" id="clear-config-button" class="button">Clear config</button><br>
+        <!-- Sign Out button -->
+        <button id="logout-button" class="logout-button hidden">Sign Out</button>
+    </div>
+
+    <p id="message" class="message"></p>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="../test/keycloak.js"></script>
+    <script src="../test/script.js"></script>
+</body>
+</html>
